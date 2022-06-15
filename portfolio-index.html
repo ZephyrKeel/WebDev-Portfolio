@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCF Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css">
+  </head>
+
+  <body>
+    <aside class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <nav class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#landingpage">Início</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </aside>
+    <section id="landingpage">
+      <div class="presentation container">
+        <div>
+          <h1>Olá,<span></span></h1>
+          <h1>meu nome é<span></span></h1>
+          <h1>Nicholas<span></span></h1>
+          <a href="#portfolio" type="button" class="cta">Portfólio</a>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <main class="portfolio container">
+        <div class="portfolio header">
+          <h1 class="section-title"><span>Portfólio</span></h1>
+        </div>
+        <div class="all-projects">
+          <div class="project-item">
+            <article class="project-info">
+              <h1>Calculadora Web Simples</h1>
+              <h2>Meu primeiro projeto web app</h2>
+              <p>
+                Fiz este projeto para praticar HTML, CSS, e Javascript. Como
+                ainda tinha pouca experiencia de programação, segui um
+                tutorial no YouTube do canal <i>Web Dev Simplfied</i> para praticar e aprender. Se quiser testar a calculadora <a href="./calc/index.html" class="projectlink">clique aquí</a>.
+              </p>
+            </article>
+            <figure class="project-img">
+              <img src="./imgs/simplewebcalc.png"
+                alt="Imagem de uma cálculadora simples"/>
+            </figure>
+          </div>
+          <div class="project-item">
+            <article class="project-info">
+              <h1>Sampler de Bateria JS30</h1>
+              <h2>Primeiro Projeto do curse Javascript30</h2>
+              <p>
+                Este é o primeiro projeto do curso Javascript30 do Wes Bos. Ele foi ótimo para praticar a integrar javascript em uma web app. Depois de seguir os passos do curso para completar o projeto, eu brinquei um pouco com o CSS original do projeto para fazer as téclas se reposicionarem de acordo com o tamanho da janela usando a função "display: grid;" do CSS. Se quiser ver o projeto <a href="JS30 prjcts/01 - JavaScript Drum Kit/index-START.html" class="projectlink">clique aquí</a>.
+              </p>
+            </article>
+            <figure class="project-img">
+              <img src="./imgs/js30-drumkit.png"
+                alt="Imagem de uma cálculadora simples"/>
+            </figure>
+          </div>
+          <div class="project-item">
+            <article class="project-info">
+              <h1>Futuros Projetos</h1>
+              <h2>#Javascript 30</h2>
+              <p>
+               Estou começando a fazer projetos do curso Javascript30 do Wes Bos. Serão 30 projetos diferentes construidos usando javascript. Se quiser saber mais, <a class="projectlink" href="https://javascript30.com" target="_blank">clique aqui</a>.
+              </p>
+            </article>
+            <figure class="project-img">
+              <img src="./imgs/webdev-codes.gif"
+                alt="Uma animação de um wed dev trabalhando"/>
+            </figure>
+        </div>
+      </main>
+    </section>
+    <section id="contact">
+        <footer class="contact container">
+            <h1 class="section-title">Contato</h1>
+            <div class="contact-form">
+                <form id="contact-form" method="post" action="mailto:nicky7812@gmail.com" enctype="multipart/form-data" name="ContactForm">
+                    <input name="name" type="text" class="form-control" placeholder="Seu Nome" required><br>
+                    <input name="email" type="email" class="form-control" placeholder="nome@email.com" required><br>
+                    <textarea name="message" class="form-control" placeholder="Sua mensagem..." rows="6" required></textarea><br>
+                    <input type= "submit" class="form-control submit" value="ENVIAR">
+                </form>
+            </div>
+        </footer>
+    </section>
+  </body>
+</html>
