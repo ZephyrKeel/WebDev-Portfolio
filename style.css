@@ -326,6 +326,63 @@ form .submit:hover{
     cursor: pointer;
 }
 
+/* icon animations */
+
+#icons{
+    background-color: black;
+    display: flex;
+    place-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 110px;
+}
+
+.icons{
+    display: flex;
+    column-gap: 25px;
+}
+
+
+.icon{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, backround-color;
+    transition-duration: .25s;
+}
+
+.icon:hover{
+    outline-offset: 4px;
+}
+
+.icon:hover i{
+    animation: shake .25s;
+}
+
+.icon--instagram:hover{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.icon--github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+
 /* Keyframes */
 @keyframes text_reveal{
     100%{
@@ -348,6 +405,24 @@ form .submit:hover{
     100%{
         width: 0%;
         left: 100%;
+    }
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
     }
 }
 
