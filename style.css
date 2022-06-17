@@ -18,6 +18,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    max-width: 100%;
+}
+
 a{
     text-decoration: none;
     color: #5fbef1;
@@ -448,14 +452,39 @@ form .submit:hover{
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 620px){
     .form-control{
         width: 450px;
         }
 }
 
-@media only screen and (max-width: 400px){
-    .form-control{
+@media only screen and (max-width: 480px){
+    #contact .contact{
+        padding: 5px;
+    }
+    #contact-form{
         width: 100%;
+        padding: 0;
+    }
+    .form-control{
+        max-width: 400px;
+        width: auto;
+        min-width: 350px;
+        margin: auto;
+        }
+}
+@media only screen and (max-width: 400px){
+    #contact .contact{
+        padding: 5px;
+    }
+    #contact-form{
+        width: 100%;
+        padding: 0;
+    }
+    .form-control{
+        max-width: 350px;
+        width: auto;
+        min-width: 100%;
+        margin: auto;
         }
 }
