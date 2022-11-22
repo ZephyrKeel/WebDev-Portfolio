@@ -308,6 +308,7 @@ form{
     font-size: 1.5rem;
     margin-bottom: 16px;
     padding: 1rem;
+    box-shadow: 5px 5px 0 rgba(209, 199, 199, 0.5);
 }
 
 input{
@@ -325,11 +326,18 @@ form .submit{
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 0 rgba(209, 199, 199, 0.5);
 }
 
 form .submit:hover{
     background-color: #841f8d;
     cursor: pointer;
+}
+
+form .submit:active{
+    background-color: #841f8d;
+    box-shadow: 2px 4px 0 rgba(209, 199, 199, 0.5);
+    transform: translateY(4px); 
 }
 
 /* icon animations */
