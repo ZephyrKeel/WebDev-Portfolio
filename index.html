@@ -294,5 +294,34 @@
         </a>
       </div>
     </footer>
+    <div class="popup" id="rickroll">
+      <img src="imgs/rick-roll.gif" alt="Rick Roll gif" />
+      <h2>It ain't easter but have an egg! 🥚</h2>
+      <button type="button" onclick="closePopup()">close</button>
+    </div>
+    <script>
+      const popup = document.getElementById("rickroll");
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+
+      const pressed = [];
+      const secretKey = "zephyrus";
+
+      window.addEventListener("keyup", (e) => {
+        pressed.push(e.key);
+        pressed.splice(
+          -secretKey.length - 1,
+          pressed.length - secretKey.length
+        );
+        if (pressed.join("").includes(secretKey)) {
+          openPopup();
+          console.log("You got Rick Rolled!");
+        }
+      });
+    </script>
   </body>
 </html>
