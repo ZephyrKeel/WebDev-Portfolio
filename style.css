@@ -109,12 +109,19 @@ p{
     margin-top: 20px;
     transition: .4s ease;
     transition-property: background-color, color;
+    box-shadow: 5px 5px 0 rgba(250, 166, 249, 0.5);
 }
 
 #landingpage .cta:hover{
     color: white;
     font-weight: 500;
     background-color: #CED9E8;
+}
+
+#landingpage .cta:active{
+    background-color: #CED9E8;
+    box-shadow: 2px 4px 0 rgba(250, 166, 249, 0.5);
+    transform: translateY(4px); 
 }
 
 #landingpage h1 span{
