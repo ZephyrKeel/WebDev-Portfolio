@@ -362,6 +362,7 @@ form .submit:active{
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     z-index: 5;
+    box-shadow:10px 10px 10px rgba(26, 37, 25, 0.8);
 }
 .open-popup{
     top: 50%;
