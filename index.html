@@ -316,12 +316,12 @@
     </footer>
 
     <!-- easter egg -->
-    <div class="popup" id="rickroll">
+    <div class="popup" id="zephyrus">
       <img src="imgs/rick-roll.gif" alt="Rick Roll gif" />
       <h2>It ain't easter but have an egg! 🥚</h2>
       <button type="button" onclick="closePopup()">close</button>
     </div>
-    <div class="popup" id="pegasus">
+    <div class="popup" id="kaibaboy">
       <iframe
         width="420"
         height="315"
@@ -330,41 +330,44 @@
         allowfullscreen
       ></iframe>
       <h2>You fell right into my trap!</h2>
-      <button type="button" onclick="closePegasus()">byee Kaiba boyy</button>
+      <button type="button" onclick="closePopup()">byee Kaiba boyy</button>
+    </div>
+    <div class="popup" id="paulenda">
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/V8HHcjjQ4TE"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <h2>Check out <b>Paulox Vlogs</b>!</h2>
+      <button type="button" onclick="closePopup()">Imma Do it.</button>
     </div>
     <script>
-      const popup = document.getElementById("rickroll");
-      const pegasus = document.getElementById("pegasus");
+      //Optimized troll function
+      const pressed = [];
+      var popId = pressed.join("");
       function openPopup() {
+        let popup = document.getElementById(popId);
         popup.classList.add("open-popup");
       }
       function closePopup() {
+        let popup = document.getElementById(popId);
         popup.classList.remove("open-popup");
       }
-      function openPegasus() {
-        pegasus.classList.add("open-popup");
-      }
-      function closePegasus() {
-        pegasus.classList.remove("open-popup");
-      }
 
-      const pressed = [];
-      const secretKey = "zephyrus";
-      const kaibacode = "kaibaboy";
+      // secretKey codes must be 8 characters long
+      const secretKey = ["zephyrus", "kaibaboy", "paulenda"];
 
       window.addEventListener("keyup", (e) => {
         pressed.push(e.key);
-        pressed.splice(
-          -secretKey.length - 1,
-          pressed.length - secretKey.length
-        );
-        if (pressed.join("").includes(secretKey)) {
+        console.log(e);
+        pressed.splice(-9, pressed.length - 8);
+        console.log(pressed);
+        if (secretKey.includes(pressed.join(""))) {
+          popId = pressed.join("");
+          console.log(popId);
           openPopup();
-          console.log("You got Rick Rolled!");
-        } else {
-          if (pressed.join("").includes(kaibacode)) {
-            openPegasus();
-          }
         }
       });
     </script>
