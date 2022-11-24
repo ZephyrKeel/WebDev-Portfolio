@@ -15,7 +15,7 @@
 
   <body>
     <aside class="menu-wrap">
-      <input type="checkbox" class="toggler" />
+      <input type="checkbox" class="toggler" id="menuToggle" />
       <div class="hamburger"><div></div></div>
       <nav class="menu">
         <div>
@@ -344,6 +344,12 @@
       <button type="button" onclick="closePopup()">Imma Do it.</button>
     </div>
     <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const menu = document.querySelector(".menu");
+      function closeMenu() {
+        menuToggle.checked = false;
+      }
+      menu.addEventListener("click", closeMenu);
       //Optimized troll function
       const pressed = [];
       var popId = pressed.join("");
