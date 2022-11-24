@@ -374,6 +374,12 @@ form .submit:active{
     border-radius: 45%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.popup iframe{
+    width: 350px;
+    margin-top: -50px;
+    border-radius: 35%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 .popup h2{
     font-size: 38px;
     font-weight: 500;

@@ -294,22 +294,43 @@
         </a>
       </div>
     </footer>
+
+    <!-- easter egg -->
     <div class="popup" id="rickroll">
       <img src="imgs/rick-roll.gif" alt="Rick Roll gif" />
       <h2>It ain't easter but have an egg! 🥚</h2>
       <button type="button" onclick="closePopup()">close</button>
     </div>
+    <div class="popup" id="pegasus">
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/hGlI5dymi2E"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <h2>You fell right into my trap!</h2>
+      <button type="button" onclick="closePegasus()">byee Kaiba boyy</button>
+    </div>
     <script>
       const popup = document.getElementById("rickroll");
+      const pegasus = document.getElementById("pegasus");
       function openPopup() {
         popup.classList.add("open-popup");
       }
       function closePopup() {
         popup.classList.remove("open-popup");
       }
+      function openPegasus() {
+        pegasus.classList.add("open-popup");
+      }
+      function closePegasus() {
+        pegasus.classList.remove("open-popup");
+      }
 
       const pressed = [];
       const secretKey = "zephyrus";
+      const kaibacode = "kaibaboy";
 
       window.addEventListener("keyup", (e) => {
         pressed.push(e.key);
@@ -320,6 +341,10 @@
         if (pressed.join("").includes(secretKey)) {
           openPopup();
           console.log("You got Rick Rolled!");
+        } else {
+          if (pressed.join("").includes(kaibacode)) {
+            openPegasus();
+          }
         }
       });
     </script>
