@@ -352,7 +352,7 @@ form .submit:active{
     width: 400px;
     background: #fff;
     border-radius: 6px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
