@@ -23,7 +23,7 @@
             <ul>
               <li><a href="#landingpage">Início</a></li>
               <li><a href="#portfolio">Portfólio</a></li>
-              <li><a href="#contact">Contato</a></li>
+              <li><a href="#icons">Contato</a></li>
             </ul>
           </div>
         </div>
@@ -318,8 +318,18 @@
     <!-- easter egg -->
     <div class="popup" id="zephyrus">
       <img src="imgs/rick-roll.gif" alt="Rick Roll gif" />
-      <h2>It ain't easter but have an egg! 🥚</h2>
-      <button type="button" onclick="closePopup()">close</button>
+      <h2>It ain't easter but have an egg!</h2>
+      <button type="button" onclick="closePopup()">🥚</button>
+    </div>
+    <div class="popup" id="ohexavem">
+      <img src="imgs/rick-goal.gif" alt="Richarlison's goal gif" />
+      <h2>
+        <b
+          >⚽⚽⚽ <br />
+          VAI TER...</b
+        >
+      </h2>
+      <button type="button" onclick="closePopup()"><b>HEXA!</b></button>
     </div>
     <div class="popup" id="kaibaboy">
       <iframe
@@ -365,7 +375,7 @@
       }
 
       // secretKey codes must be 8 characters long
-      const secretKey = ["zephyrus", "kaibaboy", "paulenda"];
+      const secretKey = ["zephyrus", "kaibaboy", "paulenda", "ohexavem"];
 
       window.addEventListener("keyup", (e) => {
         pressed.push(e.key);
