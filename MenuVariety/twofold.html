@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twofold Menu</title>
+    <link rel="stylesheet" href="twofold.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1 id="welcome" class="header-item">Welcome</h1>
+        <a href="" id="getstarted" class="header-item">Get Started</a>
+      </div>
+      <nav class="nav">
+        <input
+          type="checkbox"
+          class="toggler"
+          id="menuToggle"
+          onclick="toggleMenu()"
+        />
+        <div class="hamburger" id="menu">
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <aside id="slider-wrapper">
+      <button onclick="toggleMenu()">X</button>
+      <div id="links">
+        <a href="/index.html">Home</a>
+        <a href="elegantDNA.html">Elegant</a>
+        <a href="">3</a>
+        <a href="">4</a>
+      </div>
+      <section id="contact">
+        <div class="contact container">
+          <h1 class="section-title">Entre em Contato</h1>
+          <div class="contact-form">
+            <form
+              id="contact-form"
+              method="post"
+              action="mailto:nicky7812@gmail.com"
+              enctype="multipart/form-data"
+              name="ContactForm"
+            >
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                placeholder="Seu Nome"
+                required
+              /><br />
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="nome@email.com"
+                required
+              /><br />
+              <textarea
+                name="message"
+                class="form-control"
+                placeholder="Sua mensagem..."
+                rows="6"
+                required
+              ></textarea
+              ><br />
+              <input type="submit" class="form-control submit" value="ENVIAR" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </aside>
+    <article>
+      <section class="filler">
+        <h1 id="title">Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          tempora alias illo pariatur, dolor eius distinctio aut iste aperiam
+          magnam eum dolore totam perspiciatis animi odit inventore blanditiis
+          harum laborum quod explicabo eveniet a nisi. Error suscipit
+          praesentium magni dolor et corrupti obcaecati hic aliquam ipsum,
+          officia eum reiciendis, cumque tempora temporibus. Quisquam ut,
+          repellat quod explicabo odio et at optio aspernatur ea! Adipisci
+          soluta labore cumque ipsa? Quaerat enim quis delectus ducimus ab
+          laboriosam culpa fugit iste exercitationem, consequatur sapiente
+          beatae neque at consequuntur, unde esse. Veniam, non corporis.
+          Delectus repudiandae iure amet eius dolores quibusdam necessitatibus
+          consequatur tempora dignissimos. Libero ducimus animi explicabo
+          consectetur quia ipsam culpa velit voluptates nihil quisquam eveniet
+          incidunt laudantium neque magni doloribus, error odit? Incidunt sunt,
+          consectetur qui sint non et officia? Laudantium ex dolore ipsam
+          suscipit quis dicta eos soluta vel porro! Adipisci suscipit ullam
+          incidunt sint natus optio non neque, repellendus ut consectetur
+          tenetur doloribus dolor officia iure esse similique, quibusdam at,
+          minima amet temporibus perspiciatis? Laudantium doloribus, vero
+          architecto sapiente cupiditate aliquid possimus autem iure facere
+          corrupti deleniti sed minus quas eaque in suscipit culpa odio aperiam.
+          Animi odio quisquam facilis cupiditate veniam, officiis, commodi
+          asperiores quae ratione ullam natus dolorem eveniet tempore architecto
+          fuga in obcaecati assumenda est ab tempora? Neque dolor sint
+          necessitatibus dicta animi dolores nam magnam iure quibusdam est qui
+          laboriosam vitae, commodi aliquam corporis repellendus pariatur quas
+          adipisci eum nemo delectus blanditiis excepturi. Placeat nesciunt
+          sequi, iure in, et quod tempore exercitationem possimus doloremque
+          similique aspernatur, deserunt incidunt recusandae odit. Adipisci
+          aperiam quod earum voluptates, eligendi magnam dolore obcaecati
+          voluptate et modi quasi rerum asperiores accusantium optio ex dolor
+          repudiandae id dicta quo nihil aut magni. Voluptate facere debitis,
+          obcaecati quia, natus culpa reiciendis accusantium sint ipsum, magnam
+          est minus quos repudiandae nostrum cumque nam?
+        </p>
+      </section>
+    </article>
+    <script>
+      const menu = document.getElementById("slider-wrapper");
+
+      function toggleMenu() {
+        if (menu.style.visibility === "hidden") {
+          menu.style.visibility = "visible";
+        } else {
+          menu.style.visibility = "hidden";
+        }
+      }
+    </script>
+  </body>
+</html>
