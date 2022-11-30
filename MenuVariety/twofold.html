@@ -11,7 +11,7 @@
     <header>
       <div class="header">
         <h1 id="welcome" class="header-item">Welcome</h1>
-        <a href="" id="getstarted" class="header-item">Get Started</a>
+        <!-- <a href="" id="getstarted" class="header-item">Get Started</a> -->
       </div>
       <nav class="nav">
         <div class="hamburger">
@@ -28,7 +28,7 @@
       </div>
       <section class="contact-container" id="contact">
         <div class="contact container">
-          <h1 class="section-title">Contact</h1>
+          <h1 class="section-title">&bull; Contact Us &bull;</h1>
           <div class="contact-form">
             <form
               id="contact-form"
@@ -45,10 +45,16 @@
                 required
               /><br />
               <input
+                name="company"
+                type="text"
+                class="form-control"
+                placeholder="Your company"
+              /><br />
+              <input
                 name="email"
                 type="email"
                 class="form-control"
-                placeholder="ex. jakeperalta@email.com"
+                placeholder="your-email@email.com"
                 required
               /><br />
               <textarea
@@ -59,7 +65,11 @@
                 required
               ></textarea
               ><br />
-              <input type="submit" class="form-control submit" value="SEND" />
+              <input
+                type="submit"
+                class="form-control submit"
+                value="SEND MESSAGE"
+              />
             </form>
           </div>
         </div>
@@ -107,6 +117,7 @@
       </section>
     </article>
     <script>
+      const wrapper = document.getElementById("slider-wrapper");
       const menu = document.querySelector(".menu");
       const contact = document.querySelector(".contact-container");
       const toggler = document.querySelector(".hamburger");
@@ -116,6 +127,7 @@
         toggler.classList.toggle("active");
         menu.classList.toggle("active");
         contact.classList.toggle("active");
+        wrapper.classList.toggle("active");
       });
     </script>
   </body>
