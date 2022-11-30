@@ -14,28 +14,21 @@
         <a href="" id="getstarted" class="header-item">Get Started</a>
       </div>
       <nav class="nav">
-        <input
-          type="checkbox"
-          class="toggler"
-          id="menuToggle"
-          onclick="toggleMenu()"
-        />
-        <div class="hamburger" id="menu">
+        <div class="hamburger">
           <div></div>
         </div>
       </nav>
     </header>
     <aside id="slider-wrapper">
-      <button onclick="toggleMenu()">X</button>
-      <div id="links">
+      <div class="menu" id="links">
         <a href="/index.html">Home</a>
         <a href="elegantDNA.html">Elegant</a>
         <a href="">3</a>
         <a href="">4</a>
       </div>
-      <section id="contact">
+      <section class="contact-container" id="contact">
         <div class="contact container">
-          <h1 class="section-title">Entre em Contato</h1>
+          <h1 class="section-title">Contact</h1>
           <div class="contact-form">
             <form
               id="contact-form"
@@ -48,25 +41,25 @@
                 name="name"
                 type="text"
                 class="form-control"
-                placeholder="Seu Nome"
+                placeholder="Your Name"
                 required
               /><br />
               <input
                 name="email"
                 type="email"
                 class="form-control"
-                placeholder="nome@email.com"
+                placeholder="ex. jakeperalta@email.com"
                 required
               /><br />
               <textarea
                 name="message"
                 class="form-control"
-                placeholder="Sua mensagem..."
+                placeholder="Your message..."
                 rows="6"
                 required
               ></textarea
               ><br />
-              <input type="submit" class="form-control submit" value="ENVIAR" />
+              <input type="submit" class="form-control submit" value="SEND" />
             </form>
           </div>
         </div>
@@ -114,15 +107,16 @@
       </section>
     </article>
     <script>
-      const menu = document.getElementById("slider-wrapper");
+      const menu = document.querySelector(".menu");
+      const contact = document.querySelector(".contact-container");
+      const toggler = document.querySelector(".hamburger");
 
-      function toggleMenu() {
-        if (menu.style.visibility === "hidden") {
-          menu.style.visibility = "visible";
-        } else {
-          menu.style.visibility = "hidden";
-        }
-      }
+      toggler.addEventListener("click", () => {
+        console.log("active");
+        toggler.classList.toggle("active");
+        menu.classList.toggle("active");
+        contact.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

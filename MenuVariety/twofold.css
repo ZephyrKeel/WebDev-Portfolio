@@ -4,7 +4,7 @@ body {
   background-image: url(https://images.unsplash.com/photo-1669666808012-3e120637a62f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
   background-size: cover;
   margin: 0%;
-  font-family: Sigika Negative;
+  font-family: Signika Negative;
 }
 
 article {
@@ -13,7 +13,7 @@ article {
   left: 15vw;
   right: 15vw;
   padding: 5%;
-  border-radius: 15%;
+  border-radius: 25px;
   background-color: rgba(101, 94, 94, 0.8);
   z-index: 1;
   color: white;
@@ -71,7 +71,7 @@ div.header {
 }
 
 /* Hamburger styling */
-.nav .hamburger {
+.hamburger {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,42 +80,48 @@ div.header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-.nav .hamburger > div {
+.hamburger > div {
   position: relative;
-  width: 35%;
+  width: 28px;
   height: 2px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 999;
 }
 
-.nav .hamburger > div::before,
-.nav .hamburger > div::after {
+.hamburger > div::before,
+.hamburger > div::after {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -8px;
   width: 100%;
   height: 2px;
   background: inherit;
 }
 
-.nav .hamburger > div::after {
-  top: 10px;
+.hamburger > div::after {
+  top: 8px;
 }
 
-.nav .toggler {
-  position: absolute;
-  top: 17.5%;
-  left: 17.5%;
-  z-index: 2;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
+/* Hamburger animation */
+.hamburger.active > div {
+  transform: rotate(135deg);
+}
+
+.hamburger.active > div::before,
+.hamburger.active > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.hamburger.active:hover > div {
+  transform: rotate(225deg);
 }
 
 /* Menu CSS */
@@ -126,45 +132,30 @@ div.header {
   left: 0%;
   height: 100%;
   width: 100%;
-  visibility: hidden;
-  transition: visibility 600ms ease-in-out;
   display: flex;
+  overflow-x: hidden;
   align-items: center;
   z-index: 3;
 }
-#slider-wrapper > button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 50px;
-  width: 50px;
-  margin: 1rem;
-  background: none;
-  border-radius: 50%;
-  border: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  z-index: 4;
-}
-
-#slider-wrapper > button:hover {
-  height: 55px;
-  width: 55px;
-  background-color: rgba(239, 121, 121, 0.5);
-}
 
 #links {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
+  right: -60%;
   height: 100%;
-  width: 50%;
+  width: 60%;
   background-color: red;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
   display: flex;
   flex-direction: column;
+  z-index: 900;
   align-items: center;
   justify-content: center;
+}
+
+#links.active {
+  right: 0;
 }
 
 #links a {
@@ -178,7 +169,7 @@ div.header {
 
 #links a:hover {
   color: black;
-  font-size: 5rem;
+  font-size: clamp(5rem, 9vw, 9rem);
 }
 
 #contact {
@@ -186,11 +177,18 @@ div.header {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 55%;
   background-color: white;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
   display: flex;
+  visibility: hidden;
+  transition: visibility 600ms ease-in-out;
   align-items: center;
   align-content: center;
   justify-content: center;
   justify-items: center;
+}
+
+#contact.active {
+  visibility: visible;
 }
