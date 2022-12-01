@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="hangman.js" defer></script>
+    <link rel="stylesheet" href="hangman.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <title>Hangman</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Hangman</h1>
+      <div class="float-right">
+        Wrong Guesses: <span id="mistakes">0</span> of
+        <span id="maxwrong">6</span>
+      </div>
+      <div class="text-center">
+        <img id="hangmanImg" src="./images/H0.png" alt="hangman image" />
+        <p id="guess">Guess the word:</p>
+        <p id="wordSpotlight">word</p>
+      </div>
+      <div class="text-center" id="keyboard"></div>
+      <button class="btn btn-info" onclick="reset()">Reset</button>
+    </div>
+  </body>
+</html>

@@ -363,6 +363,17 @@ form .submit:active {
   z-index: 5;
   box-shadow: 10px 10px 10px rgba(26, 37, 25, 0.8);
 }
+
+#gametime.popup {
+  width: 950px;
+}
+
+#gametime.popup > iframe {
+  width: 900px;
+  height: 725px;
+  border-radius: 25px;
+}
+
 .open-popup {
   top: 50%;
   visibility: visible;
