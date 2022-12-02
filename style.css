@@ -239,7 +239,7 @@ p {
 
 #portfolio .project-img {
   flex-basis: 50%;
-  height: 300px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -365,12 +365,12 @@ form .submit:active {
 }
 
 #gametime.popup {
-  width: 950px;
+  width: 850px;
 }
 
 #gametime.popup > iframe {
-  width: 900px;
-  height: 725px;
+  width: 770px;
+  height: 575px;
   border-radius: 25px;
 }
 
